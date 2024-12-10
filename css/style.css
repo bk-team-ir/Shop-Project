@@ -1,4 +1,5 @@
 @import url("/css/reset.css");
+@import url("/css/shop.css");
 
 @font-face {
   font-family: vazir;
@@ -437,7 +438,7 @@ footer .middle p {
   margin-top: 20px;
 }
 
-footer .left .box {
+footer .left .contact--box {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -445,11 +446,11 @@ footer .left .box {
   margin-bottom: 10px;
 }
 
-footer .left .box h6 {
+footer .left .contact--box h6 {
   color: #fff;
   opacity: .7;
 }
 
-footer .left .box p {
+footer .left .contact--box p {
   color: #fff;
 }
