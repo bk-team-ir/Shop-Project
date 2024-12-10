@@ -148,11 +148,143 @@ menu .register--box button:hover {
   border-radius: 25px;
   margin-top: 20px;
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .welcome .left--box .box button:hover {
   background-color: #fff;
   color: #333;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
+}
+
+.last--products {
+  padding: 20px;
+}
+
+.last--products h2 {
+  width: 17%;
+  color: #333;
+  font-size: 25px;
+  padding: 0 0 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  margin-right: 50px;
+}
+
+.last--products .row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+.last--products .box {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+.last--products .box img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.last--products .box h4 {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.last--products .box p {
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.last--products .box button {
+  background-color: transparent;
+  font-size: 15px;
+  padding: 5px 15px;
+  border: 1px solid #333;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.last--products .box button:hover {
+  background-color: #0634d2;
+  color: #fff;
+  border-color: #0634d2;
+  transition: all 0.2s ease;
+}
+
+.top--game {
+  background: linear-gradient(to right, #c00701, #1d1d1d);
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+}
+
+.top--game .right {
+  width: 15%;
+  margin: 0 50px 0 80px;
+}
+
+.top--game .right img {
+  width: 100%;
+}
+
+.top--game .left {
+  width: 50%;
+  margin-top: auto;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.top--game .left span {
+  color: #a99c9b;
+  font-size: 18px;
+}
+
+.top--game .left h4 {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.top--game .left p {
+  color: #b1a3a3;
+  margin-top: 20px;
+  line-height: 2;
+  text-align: justify;
+}
+
+.top--game .left button {
+  width: fit-content;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.top--game .left button:hover {
+  background-color: #fff;
+  color: #333;
+  transition: all 0.2s ease;
 }
