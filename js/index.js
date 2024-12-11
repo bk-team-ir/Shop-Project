@@ -165,4 +165,10 @@ clear.addEventListener("click", () => {
   localStorage.clear();
   document.getElementById(`cart`).innerHTML = `0 محصول`;
    ul.innerHTML = ""
+   cart = []
 });
+
+const login = document.getElementById("login")
+login.addEventListener("click", () => {
+  window.location.href = "/login.html"
+})
