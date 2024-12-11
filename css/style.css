@@ -98,6 +98,41 @@ menu .cart {
   width: 200px;
 }
 
+#cart--box ul {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cart--box ul li {
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#cart--box ul .buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#cart--box ul button {
+  width: 49%;
+}
+
+#cart--box ul button:first-child {
+  background-color: #FF463F;
+}
+
+#cart--box ul button:first-child:hover {
+  background-color: #c00701;
+}
+
 menu .cart button {
   height: 50px;
   background-color: #0839d3;
