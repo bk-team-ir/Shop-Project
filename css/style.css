@@ -446,7 +446,7 @@ footer .right form {
   margin-top: 25px;
 }
 
-footer .right input {
+footer .right form input {
   height: 40px;
   background-color: transparent;
   color: #fff;
@@ -457,12 +457,13 @@ footer .right input {
   border: 1px solid #0839d3;
 }
 
-footer .right button {
+footer .right form button {
   background-color: #0839d3;
   font-weight: bold;
   padding: 0 25px;
   border: 1px solid #0839d3;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 footer .middle {
