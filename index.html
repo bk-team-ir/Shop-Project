@@ -27,17 +27,9 @@
         src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2023/03/slider4.jpg"
         alt="banner"
       />
-      <div class="left--box">
+      <div class="left--box" id="off--box">
         <h2>بازی پر تخفیف</h2>
-        <div class="box">
-          <img
-            src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/tlou-460x460.jpg"
-            alt="the last of us"
-          />
-          <h3>بازی The Last Of Us</h3>
-          <p>300,000 تومان</p>
-          <button>افزودن به سبدخرید</button>
-        </div>
+        
       </div>
     </div>
     <div class="last--products">
@@ -66,32 +58,7 @@
     </div>
     <div class="last--blogs">
       <h2>آخرین بلاگ ها</h2>
-      <div class="row">
-        <div class="box">
-          <img
-            src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/12/cpu-gamaloop-1-460x253.jpg"
-            alt=""
-          />
-          <h4>راهنمای خرید cpu گیمینگ</h4>
-          <p>1403/09/20</p>
-        </div>
-        <div class="box">
-          <img
-            src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/12/cpu-gamaloop-1-460x253.jpg"
-            alt=""
-          />
-          <h4>راهنمای خرید cpu گیمینگ</h4>
-          <p>1403/09/20</p>
-        </div>
-        <div class="box">
-          <img
-            src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/12/cpu-gamaloop-1-460x253.jpg"
-            alt=""
-          />
-          <h4>راهنمای خرید cpu گیمینگ</h4>
-          <p>1403/09/20</p>
-        </div>
-      </div>
+      <div class="row" id="last--blogs"></div>
     </div>
     <footer>
       <div class="right">
@@ -146,34 +113,6 @@
         </div>
       </div>
     </footer>
-    <script type="module">
-      import supabase from "/database/database.js";
-      const lastProducts = document.getElementById("last--products");
-      if (supabase) {
-        let { data: products, error } = await supabase
-          .from("products")
-          .select("*")
-          .order("id", { ascending: false })
-          .limit(4);
-        if (products) {
-          products.forEach((product) => {
-            const box = `
-      <div class="box">
-        <img
-          src="${product.image}"
-          alt="${product.name}"
-        />
-        <h4>${product.name}</h4>
-        <p>${product.price} تومان</p>
-        <button>افزودن به سبدخرید</button>
-      </div>
-    `;
-            lastProducts.innerHTML += box;
-          });
-        } else {
-          console.error(error);
-        }
-      }
-    </script>
+    <script type="module" src="/js/index.js"></script>
   </body>
 </html>
