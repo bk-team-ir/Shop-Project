@@ -27,6 +27,7 @@ menu {
   flex-direction: row;
   align-items: center;
   padding: 0 10px;
+  z-index: 200;
 }
 
 menu .menu--items {
@@ -195,11 +196,35 @@ menu .register--box button:hover {
   border: 1px solid #eee;
   border-radius: 20px;
   margin: 0 10px;
+  position: relative;
 }
 
 .last--products .box img {
   width: 100%;
   border-radius: 15px;
+}
+
+.last--products .box .off {
+  background-color: #ff463f;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 20px 30% 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.last--products .box .off p {
+  height: fit-content;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  opacity: 1;
 }
 
 .last--products .box h4 {
