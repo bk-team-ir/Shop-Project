@@ -160,7 +160,6 @@ async function loadBlogs() {
 }
 
 const clear = document.getElementById("clear--cart");
-
 clear.addEventListener("click", () => {
   localStorage.clear();
   document.getElementById(`cart`).innerHTML = `0 محصول`;
@@ -170,5 +169,5 @@ clear.addEventListener("click", () => {
 
 const login = document.getElementById("login")
 login.addEventListener("click", () => {
-  window.location.href = "/login.html"
+  location.href = "/login.html"
 })
