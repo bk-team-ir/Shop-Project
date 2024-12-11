@@ -27,7 +27,9 @@ async function loadProducts() {
                 }`
               : product.price
           } تومان</p>
-          <button class="product--btn" data-id="${product.id}">افزودن به سبد خرید</button>
+          <button class="product--btn" data-id="${
+            product.id
+          }">افزودن به سبد خرید</button>
         </div>
       `;
       lastProducts.innerHTML += box;
@@ -54,10 +56,12 @@ function setupEventListeners() {
         cart[productId] = 1;
       }
       localStorage.setItem("products", JSON.stringify(cart));
-      document.getElementById("cart").innerHTML = `${Object.keys(cart).length} محصول`;
+      document.getElementById("cart").innerHTML = `${
+        Object.keys(cart).length
+      } محصول`;
       cartBox();
     };
-    
+
     button.addEventListener("click", button.clickHandler);
   });
 }
@@ -90,7 +94,6 @@ async function cartBox() {
           <p>${product.price} تومان</p>
           <span>${count} عدد</span>
         </li>
-        
       `;
     ul.innerHTML += li;
   });
@@ -123,7 +126,9 @@ async function loadLastOffProducts() {
                 }`
               : product.price
           } تومان</p>
-          <button class="product--btn" data-id="${product.id}">افزودن به سبد خرید</button>
+          <button class="product--btn" data-id="${
+            product.id
+          }">افزودن به سبد خرید</button>
         </div>
       `;
       lastOff.innerHTML += box;
@@ -153,3 +158,11 @@ async function loadBlogs() {
     });
   }
 }
+
+const clear = document.getElementById("clear--cart");
+
+clear.addEventListener("click", () => {
+  localStorage.clear();
+  document.getElementById(`cart`).innerHTML = `0 محصول`;
+   ul.innerHTML = ""
+});
