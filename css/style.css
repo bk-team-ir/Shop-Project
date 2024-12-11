@@ -234,6 +234,7 @@ menu .register--box button:hover {
 .top--game {
   background: linear-gradient(to right, #c00701, #1d1d1d);
   padding-top: 60px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
 }
