@@ -16,7 +16,24 @@
         </ul>
       </div>
       <div class="cart">
-        <button>0 تومان</button>
+        <button id="cart" popovertarget="cart--box">0 محصول</button>
+        <div popover id="cart--box">
+          <ul id="cart--products"></ul>
+          <div class="box">
+            <ul>
+              <li>
+                <h5>تعداد:</h5>
+                <p></p>
+              </li>
+              <li>
+                <h5>قیمت کل:</h5>
+                <p></p>
+              </li>
+              <button>پاک کردن سبدخرید</button>
+              <button>پرداخت</button>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="register--box">
         <button>ورود یا ثبت نام</button>
@@ -29,7 +46,6 @@
       />
       <div class="left--box" id="off--box">
         <h2>بازی پر تخفیف</h2>
-        
       </div>
     </div>
     <div class="last--products">
