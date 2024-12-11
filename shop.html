@@ -11,7 +11,7 @@
       <div class="menu--items">
         <ul>
           <li><a href="/">صفحه نخست</a></li>
-          <li><a href="">فروشگاه</a></li>
+          <li><a href="/shop.html">فروشگاه</a></li>
           <li><a href="">وبلاگ</a></li>
         </ul>
       </div>
@@ -50,80 +50,7 @@
               <option value="1">مرتب سازی بر اساس ارزان ترین</option>
               <option value="1">مرتب سازی بر اساس گران ترین</option>
             </select>
-            <div class="items">
-              <div class="box">
-                <img
-                  src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/tlou-460x460.jpg"
-                  alt=""
-                />
-                <p>بازی The lost of Us</p>
-                <h3>300000تومان</h3>
-                <button>توضیحات</button>
-              </div>
-              <div class="box">
-                <img
-                  src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/r6-460x460.jpg"
-                  alt=""
-                />
-                <p>بازی Tom Clancy’s Rainbow Six® Siege Deluxe Edition</p>
-                <h3>200000تومان</h3>
-                <button>توضیحات</button>
-              </div>
-              <div class="box">
-                <img
-                  src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/r6-460x460.jpg"
-                  alt=""
-                />
-                <p>بازی Tom Clancy’s Rainbow Six® Siege Deluxe Edition</p>
-                <h3>200000تومان</h3>
-                <button>توضیحات</button>
-              </div>
-              <div class="box">
-                <img
-                  src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/r6-460x460.jpg"
-                  alt=""
-                />
-                <p>بازی Tom Clancy’s Rainbow Six® Siege Deluxe Edition</p>
-                <h3>200000تومان</h3>
-                <button>توضیحات</button>
-              </div>
-              <div class="box">
-                <img
-                  src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/r6-460x460.jpg"
-                  alt=""
-                />
-                <p>بازی Tom Clancy’s Rainbow Six® Siege Deluxe Edition</p>
-                <h3>200000تومان</h3>
-                <button>توضیحات</button>
-              </div>
-              <div class="box">
-                <img
-                  src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/r6-460x460.jpg"
-                  alt=""
-                />
-                <p>بازی Tom Clancy’s Rainbow Six® Siege Deluxe Edition</p>
-                <h3>200000تومان</h3>
-                <button>توضیحات</button>
-              </div>
-              <div class="box">
-                <img
-                  src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/r6-460x460.jpg"
-                  alt=""
-                />
-                <p>بازی Tom Clancy’s Rainbow Six® Siege Deluxe Edition</p>
-                <h3>200000تومان</h3>
-                <button>توضیحات</button>
-              </div>
-              <div class="box">
-                <img
-                  src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/r6-460x460.jpg"
-                  alt=""
-                />
-                <p>بازی Tom Clancy’s Rainbow Six® Siege Deluxe Edition</p>
-                <h3>200000تومان</h3>
-                <button>توضیحات</button>
-              </div>
-            </div>
+            <div class="items" id="items"></div>
           </div>
         </div>
       </div>
@@ -181,5 +108,31 @@
         </div>
       </div>
     </footer>
+    <script type="module">
+      import supabase from "/database/database.js";
+
+      const items = document.getElementById("items");
+
+      let { data: shopProducts, err } = await supabase
+        .from("products")
+        .select("*")
+        .order("id", { ascending: false });
+      if (shopProducts) {
+        shopProducts.forEach((product) => {
+          const box = `
+          <div class="box">
+            <img
+              src="${product.image}"
+              alt="${product.name}"
+            />
+            <p>${product.name}</p>
+            <h3>${product.price} تومان</h3>
+            <button>توضیحات</button>
+          </div>
+        `;
+          items.innerHTML += box;
+        });
+      }
+    </script>
   </body>
 </html>

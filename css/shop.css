@@ -101,8 +101,8 @@ select {
   margin-bottom: 20px;
 }
 
-.box {
-  height: 400px;
+.items .box {
+  height: 380px;
   width: 22%;
   background-color: transparent;
   border: 1px solid #eee;
@@ -117,7 +117,7 @@ select {
   transition: all 0.2s ease;
 }
 
-.box:hover {
+.items .box:hover {
   box-shadow: 0 0 20px #0000003e;
   transition: all 0.2s ease;
 }

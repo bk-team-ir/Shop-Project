@@ -11,7 +11,7 @@
       <div class="menu--items">
         <ul>
           <li><a href="/">صفحه نخست</a></li>
-          <li><a href="">فروشگاه</a></li>
+          <li><a href="/shop.html">فروشگاه</a></li>
           <li><a href="">وبلاگ</a></li>
         </ul>
       </div>
@@ -42,44 +42,7 @@
     </div>
     <div class="last--products">
       <h2>آخرین محصولات</h2>
-      <div class="row">
-        <div class="box">
-          <img
-            src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/valhalla-460x460.jpg"
-            alt=""
-          />
-          <h4>بازی Assassin’s Creed Valhalla</h4>
-          <p>600,000 تومان</p>
-          <button>افزودن به سبدخرید</button>
-        </div>
-        <div class="box">
-          <img
-            src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/valhalla-460x460.jpg"
-            alt=""
-          />
-          <h4>بازی Assassin’s Creed Valhalla</h4>
-          <p>600,000 تومان</p>
-          <button>افزودن به سبدخرید</button>
-        </div>
-        <div class="box">
-          <img
-            src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/valhalla-460x460.jpg"
-            alt=""
-          />
-          <h4>بازی Assassin’s Creed Valhalla</h4>
-          <p>600,000 تومان</p>
-          <button>افزودن به سبدخرید</button>
-        </div>
-        <div class="box">
-          <img
-            src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2019/11/valhalla-460x460.jpg"
-            alt=""
-          />
-          <h4>بازی Assassin’s Creed Valhalla</h4>
-          <p>600,000 تومان</p>
-          <button>افزودن به سبدخرید</button>
-        </div>
-      </div>
+      <div class="row" id="last--products"></div>
     </div>
 
     <div class="top--game">
@@ -169,20 +132,48 @@
         <p>تمامی حقوق سایت نزد بی کی تیم محفوظ میباشد.</p>
       </div>
       <div class="left">
-        <div class="box">
+        <div class="contact--box">
           <h6>شماره تماس:</h6>
           <p>88543754 021</p>
         </div>
-        <div class="box">
+        <div class="contact--box">
           <h6>ایمیل پشتیبانی:</h6>
           <p>info@sbthemes.ir</p>
         </div>
-        <div class="box">
+        <div class="contact--box">
           <h6>نشانی:</h6>
           <p>تهران، ولیعصر، تقاطع تئاتر شهر</p>
         </div>
       </div>
     </footer>
-    <script type="module" src="/database/database.js"></script>
+    <script type="module">
+      import supabase from "/database/database.js";
+      const lastProducts = document.getElementById("last--products");
+      if (supabase) {
+        let { data: products, error } = await supabase
+          .from("products")
+          .select("*")
+          .order("id", { ascending: false })
+          .limit(4);
+        if (products) {
+          products.forEach((product) => {
+            const box = `
+      <div class="box">
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+        />
+        <h4>${product.name}</h4>
+        <p>${product.price} تومان</p>
+        <button>افزودن به سبدخرید</button>
+      </div>
+    `;
+            lastProducts.innerHTML += box;
+          });
+        } else {
+          console.error(error);
+        }
+      }
+    </script>
   </body>
 </html>
