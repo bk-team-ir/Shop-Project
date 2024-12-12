@@ -72,7 +72,7 @@
   font-size: 20px;
 }
 
-form {
+.login-page form {
   width: 50%;
   height: 100%;
   display: flex;
@@ -81,14 +81,14 @@ form {
   justify-content: center;
 }
 
-form .input-box {
+.login-page form .input-box {
   position: relative;
   width: 90%;
   height: 50px;
   margin-bottom: 20px;
 }
 
-.input-box input {
+.login-page .input-box input {
   position: absolute;
   left: -70%;
   width: 260px;
@@ -102,7 +102,7 @@ form .input-box {
 }
 
 
-form input:focus {
+.login-page form input:focus {
   border-bottom: 1px solid #000;
 }
 
@@ -136,7 +136,7 @@ form input:focus {
   display: none;
 }
 
-form button {
+.login-page form button {
   position: absolute;
   top: 68%;
   left: 33%;
@@ -149,7 +149,7 @@ form button {
   font-size: 20px;
 }
 
-form button:hover {
+.login-page form button:hover {
   background-color: #000000;
   color: #fff;
 }
