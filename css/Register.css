@@ -82,7 +82,7 @@
   left: 30%;
 }
 
-form {
+.Register-page form {
   position: absolute;
   top: 3%;
   left: 20%;
@@ -94,7 +94,7 @@ form {
   justify-content: center;
 }
 
-form .register-input-box {
+.Register-page form .register-input-box {
   position: relative;
   width: 90%;
   height: 50px;
@@ -112,7 +112,7 @@ form .register-input-box {
   color: #fff;
 }
 
-form input:focus {
+.Register-page form input:focus {
   border-bottom: 1px solid #ffffff;
 }
 
@@ -161,7 +161,7 @@ form input:focus {
   display: none;
 }
 
-.left-register form button {
+.Register-page .left-register form button {
   position: absolute;
   top: 74%;
   background-color: transparent;
@@ -173,7 +173,7 @@ form input:focus {
   color: #fff;
 }
 
-.left-register > button {
+.Register-page .left-register > button {
   position: absolute;
   top: 87%;
   left: 24%;
@@ -186,13 +186,13 @@ form input:focus {
   color: #fff;
 }
 
-.left-register form button:hover {
+.Register-page .left-register form button:hover {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
 }
 
-.left-register > button:hover {
+.Register-page .left-register > button:hover {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
