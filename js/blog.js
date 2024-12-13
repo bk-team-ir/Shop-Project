@@ -1,7 +1,6 @@
 import supabase from "/database/database.js";
 
 const blogsBox = document.getElementById("blogs--box");
-
 async function loadBlogs() {
   let { data: blogs } = await supabase.from("blogs").select("*");
   blogs.forEach((blog) => {
