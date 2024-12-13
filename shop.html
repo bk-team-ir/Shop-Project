@@ -16,10 +16,25 @@
         </ul>
       </div>
       <div class="cart">
-        <button>0 تومان</button>
+        <button id="cart" popovertarget="cart--box">0 محصول</button>
+        <div popover id="cart--box">
+          <ul id="cart--products"></ul>
+          <div class="box">
+            <ul>
+              <li>
+                <h5>قیمت کل:</h5>
+                <p></p>
+              </li>
+              <div class="buttons">
+                <button id="clear--cart">پاک کردن سبدخرید</button>
+                <button>پرداخت</button>
+              </div>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="register--box">
-        <button>ورود یا ثبت نام</button>
+        <button id="login">ورود یا ثبت نام</button>
       </div>
     </menu>
     <div class="page">
@@ -109,5 +124,6 @@
       </div>
     </footer>
     <script type="module" src="/js/shop.js"></script>
+    <script type="module" src="/js/index.js"></script>
   </body>
 </html>

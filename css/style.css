@@ -5,18 +5,18 @@
 @import url("/css/blog.css");
 
 @font-face {
-  font-family: vazir;
-  src: url("/assets/fonts/Vazirmatn-Regular.woff2");
+  font-family: estedad;
+  src: url("/assets/fonts/Estedad-FD-Regular.ttf");
 }
 
 * {
   box-sizing: border-box;
-  font-family: vazir;
+  font-family: estedad;
 }
 
 body {
   background-color: #fdfdfd;
-  font-family: vazir;
+  font-family: estedad;
 }
 
 menu {
