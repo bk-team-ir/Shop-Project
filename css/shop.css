@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.page {
+  padding: 0 20px;
+}
+
 h1 {
   border-bottom: 1px solid #4f4f4f49;
   padding-bottom: 5px;
