@@ -200,22 +200,43 @@ menu .register--box button:hover {
 }
 
 .welcome .left--box .box {
-  width: 100%;
+  min-width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 30px;
+  position: relative;
 }
 
 .welcome .left--box .box img {
-  width: 50%;
+  width: 70%;
+}
+
+.welcome .left--box .box span {
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #FF463F;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 0 20px 50% 50%;
 }
 
 .welcome .left--box .box h3 {
+  width: 100%;
+  text-align: center;
   color: #fff;
   font-size: 18px;
   margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .welcome .left--box .box p {
@@ -239,6 +260,18 @@ menu .register--box button:hover {
   background-color: #fff;
   color: #333;
   transition: all 0.2s ease;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease;
 }
 
 .last--products {
@@ -287,6 +320,7 @@ menu .register--box button:hover {
   width: 50px;
   height: 50px;
   border-radius: 0 20px 30% 30%;
+  font-weight: bold;
   display: flex;
   flex-direction: row;
   justify-content: center;

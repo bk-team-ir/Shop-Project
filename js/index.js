@@ -1,6 +1,7 @@
 import supabase from "/database/database.js";
 
 let cart = {};
+let currentSlide = 0;
 
 function loadCart() {
   const savedCart = localStorage.getItem("products");
@@ -97,7 +98,6 @@ async function cartBox() {
       product.off !== 0
         ? product.price * ((100 - product.off) / 100)
         : product.price;
-
     totalQuantity += count;
     totalPrice += productPrice * count;
 
@@ -129,34 +129,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadLastOffProducts() {
   const lastOff = document.getElementById("off--box");
+  const slidesContainer = lastOff.querySelector(".slides");
   const { data: lastProduct } = await supabase
     .from("products")
     .select("*")
     .order("off", { ascending: false })
-    .limit(1);
+    .limit(3);
 
   if (lastProduct) {
     lastProduct.forEach((product) => {
       const box = `
-                <div class="box">
-                    <img src="${product.image}" alt="${product.name}" />
-                    <h3>${product.name}</h3>
-                    <p>${
-                      product.off !== 0
-                        ? `<del>${product.price}</del> ${
-                            product.price * ((100 - product.off) / 100)
-                          }`
-                        : product.price
-                    } تومان</p>
-                    <button class="product--btn" data-id="${
-                      product.id
-                    }">افزودن به سبد خرید</button>
-                </div>
-            `;
-      lastOff.innerHTML += box;
+        <div class="box">
+          <img src="${product.image}" alt="${product.name}" />
+          <span>${product.off !== 0 ? `${product.off}%` : ""}</span>
+          <h3>${product.name}</h3>
+          <p>${
+            product.off !== 0
+              ? `<del>${product.price}</del> ${
+                  product.price * ((100 - product.off) / 100)
+                }`
+              : product.price
+          } تومان</p>
+          <button class="product--btn" data-id="${
+            product.id
+          }">افزودن به سبد خرید</button>
+        </div>
+      `;
+      slidesContainer.innerHTML += box;
     });
     setupEventListeners();
+    startSlider();
   }
+}
+
+function startSlider() {
+  const totalSlides = document.querySelectorAll("#off--box .box").length;
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    const offset = currentSlide * 100;
+    document.querySelector(
+      ".slides"
+    ).style.transform = `translateX(${offset}%)`;
+  }, 3000);
 }
 
 async function loadBlogs() {
