@@ -91,7 +91,11 @@ async function cartBox() {
         <li>
           <img src="${product.image}" alt="${product.name}" >
           <h6>${product.name}</h6>
-          <p>${product.price} تومان</p>
+          <p>${
+            product.off !== 0
+              ? product.price * ((100 - product.off) / 100)
+              : product.price
+          } تومان</p>
           <span>${count} عدد</span>
         </li>
       `;
@@ -163,11 +167,11 @@ const clear = document.getElementById("clear--cart");
 clear.addEventListener("click", () => {
   localStorage.clear();
   document.getElementById(`cart`).innerHTML = `0 محصول`;
-   ul.innerHTML = ""
-   cart = []
+  ul.innerHTML = "";
+  cart = [];
 });
 
-const login = document.getElementById("login")
+const login = document.getElementById("login");
 login.addEventListener("click", () => {
-  location.href = "/login.html"
-})
+  location.href = "/login.html";
+});
