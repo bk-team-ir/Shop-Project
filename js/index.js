@@ -155,7 +155,7 @@ async function loadBlogs() {
         <div class="box">
           <img src="${blog.image}" alt="${blog.title}" />
           <h4>${blog.title}</h4>
-          <p>${blog.created_at}</p>
+          <p>${blog.text}</p>
         </div>
       `;
       lastBlogs.innerHTML += box;
