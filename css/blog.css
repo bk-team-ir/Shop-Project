@@ -28,6 +28,10 @@
   display: block;
 }
 
+.boxes .box a {
+  color: #000;
+}
+
 .boxes .box h1 {
   font-size: 20px;
   border: none;
