@@ -4,6 +4,7 @@
 @import url("/css/register.css");
 @import url("/css/blog.css");
 @import url("/css/blogDetails.css");
+@import url("/css/productDetails.css");
 
 /* width */
 ::-webkit-scrollbar {
@@ -322,9 +323,11 @@ menu .register--box button:hover {
 
 .last--products .box {
   width: 20%;
+  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 25px;
   border: 1px solid #eee;
   border-radius: 20px;

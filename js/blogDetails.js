@@ -11,11 +11,12 @@ async function loadBlogDetails() {
     .single();
 
   if (blog) {
+    document.title = blog.title
     const box = `
       <div class="title">
         <h1>${blog.title}</h1>
       </div>
-      <img src="${blog.image}" alt="${blog.name}" />
+      <img src="${blog.image}" alt="${blog.title}" />
       <p>${blog.text}</p>
     `;
     document.getElementById("blog").innerHTML = box
