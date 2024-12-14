@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <menu>
+      <div class="menu--items">
+        <ul>
+          <li><a href="/">صفحه نخست</a></li>
+          <li><a href="/shop.html">فروشگاه</a></li>
+          <li><a href="/blog.html">وبلاگ</a></li>
+        </ul>
+      </div>
+      <div class="cart">
+        <button id="cart" popovertarget="cart--box">0 محصول</button>
+        <div popover id="cart--box">
+          <ul id="cart--products"></ul>
+          <div class="box">
+            <ul>
+              <li>
+                <h5>قیمت کل:</h5>
+                <p>0 تومان</p>
+              </li>
+              <div class="buttons">
+                <button id="clear--cart">پاک کردن سبدخرید</button>
+                <button>پرداخت</button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="register--box">
+        <button id="login">ورود یا ثبت نام</button>
+      </div>
+    </menu>
+
+    <div class="blog--details">
+      <div id="blog"></div>
+      <form>
+        <h2>نظرات</h2>
+        <input type="text" placeholder="عنوان...">
+        <textarea placeholder="متن..."  rows="8"></textarea>
+        <button>ارسال نظر</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="right">
+        <h5>خبرنامه بی کی شاپ</h5>
+        <p>با ثبت نام در خبرنامه از جدیدترین جشنواره‌های ما مطلع می‌شوید...</p>
+        <form>
+          <input type="email" placeholder="ایمیل" />
+          <button id="send">ارسال</button>
+        </form>
+      </div>
+      <div class="middle">
+        <div class="row">
+          <a class="box">
+            <img
+              src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2023/03/insta-1.png"
+              alt=""
+            />
+          </a>
+          <a class="box">
+            <img
+              src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2023/03/telegram.png"
+              alt=""
+            />
+          </a>
+          <a class="box">
+            <img
+              src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2023/03/yout.png"
+              alt=""
+            />
+          </a>
+          <a class="box">
+            <img
+              src="https://tethys.demo.sbthemes.ir/game/wp-content/uploads/2023/03/twit.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <p>تمامی حقوق سایت نزد بی کی تیم محفوظ میباشد.</p>
+      </div>
+      <div class="left">
+        <div class="contact--box">
+          <h6>شماره تماس:</h6>
+          <p>88543754 021</p>
+        </div>
+        <div class="contact--box">
+          <h6>ایمیل پشتیبانی:</h6>
+          <p>info@sbthemes.ir</p>
+        </div>
+        <div class="contact--box">
+          <h6>نشانی:</h6>
+          <p>تهران، ولیعصر، تقاطع تئاتر شهر</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/js/blogDetails.js"></script>
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>

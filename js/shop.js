@@ -24,7 +24,7 @@ if (shopProducts) {
               }`
             : product.price
         } تومان</h3>
-        <button>توضیحات</button>
+        <button onClick="location.href = '/productDetails.html?id=${product.id}'">توضیحات</button>
       </div>
     `;
     items.innerHTML += box;

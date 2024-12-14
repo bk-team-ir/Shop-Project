@@ -1,0 +1,94 @@
+.product--details {
+  margin-top: 75px;
+  padding: 0 20px;
+}
+
+.product--details .box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 30px 0;
+}
+
+.product--details .box .info {
+  width: 40%;
+}
+
+.product--details .box h1 {
+  margin: 0;
+  padding-right: 0;
+  font-weight: bold;
+}
+
+.product--details .box img {
+  width: 30%;
+  margin-left: 20px;
+}
+
+.product--details .box p {
+  line-height: 2;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.product--details .box .prices {
+  border: 1px solid #5d5d5d;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.product--details .box .prices .price {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.product--details .box .prices button {
+  margin: 0 auto;
+}
+
+.product--details h2 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+.product--details form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.product--details input {
+  width: 300px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  outline: 0;
+  border: 1px solid #5d5d5d;
+}
+
+.product--details textarea {
+  max-width: 600px;
+  min-width: 600px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  outline: 0;
+}
+
+.product--details form button {
+  width: 200px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #0839d3;
+  border: 0;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+}
