@@ -26,12 +26,7 @@ async function loadBlogDetails() {
             <div class="price">
               <p>قیمت:</p>
               <p>${
-                product.off !== 0
-                  ? `<del>${product.price}</del> ${
-                      (product.price * (100 - product.off)) / 100
-                    }`
-                  : product.price
-              } تومان</p>
+                product.off !== 0 ? `<del>${product.price}</del> ${(product.price * (100 - product.off)) / 100}`: product.price} تومان</p>
             </div>
             <button>افزودن به سبدخرید</button>
           </div>
