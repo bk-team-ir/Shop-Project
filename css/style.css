@@ -624,6 +624,10 @@ footer .left .contact--box p {
 }
 
 @media only screen and (max-width: 480px) {
+  #cart--box ul li {
+    width: 350px;
+  }
+  
   body {
     width: 100%;
   }

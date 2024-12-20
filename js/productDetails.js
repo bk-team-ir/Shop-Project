@@ -11,7 +11,7 @@ async function loadBlogDetails() {
     .single();
 
   if (product) {
-    document.title = product.title;
+    document.title = product.name;
     const box = `
       <div class="box">
           <img
