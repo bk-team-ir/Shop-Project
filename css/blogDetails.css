@@ -13,7 +13,7 @@
 .blog--details p {
   text-align: justify;
   line-height: 2;
-  opacity: .8;
+  opacity: 0.8;
   padding-bottom: 10px;
   border-bottom: 1px solid #5d5d5d;
   margin-bottom: 10px;
@@ -56,4 +56,23 @@
   font-size: 15px;
   cursor: pointer;
   color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .blog--details {
+    width: 100%;
+  }
+
+  .blog--details img {
+    width: 100%;
+  }
+
+  .blog--details input {
+    width: 250px;
+  }
+
+  .blog--details textarea {
+    max-width: 370px;
+    min-width: 370px;
+  }
 }
