@@ -182,3 +182,43 @@ select {
   color: #fff;
   transition: all 0.2s ease;
 }
+
+@media only screen and (max-width: 480px) {
+  .middle .right {
+    display: none;
+  }
+
+  .middle .left {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .items .box {
+    width: 48%;
+    height: 300px;
+  }
+
+  .box p {
+    font-size: 16px;
+    width: 100%;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .items .box .off p {
+    width: fit-content;
+    line-height: 1;
+  }
+
+  .box h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .box button {
+    height: 35px;
+    font-size: 14px;
+  }
+}
