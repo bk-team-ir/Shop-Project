@@ -49,3 +49,17 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+@media only screen and (max-width: 480px) {
+  .boxes {
+    width: 100%;
+  }
+
+  .boxes .box {
+    width: 90%;
+  }
+
+  .boxes .box h1 {
+    line-height: 1.5;
+  }
+}
